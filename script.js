@@ -1,12 +1,13 @@
 //Name
 
-document.getElementById('submit-button').addEventListener('submit', function(){
+document.getElementById('submit-button').addEventListener('click', function(){
     event.preventDefault()
 
-    var name = document.getElementById('name-field').value.trim()
+
+    var name = document.getElementById('name').value.trim()
 
     if (name !== ""){
-        // document.getElementById('name').innerText = 'Proceed to next step'
+        document.getElementById('name').innerText = 'Proceed to next step'
         validName()
     } else {
         emptyError1()
@@ -34,7 +35,7 @@ function emptyError1(errorDiv){
 
 }
 
-//Car - Year, Make, Model Note: 3 event listeners needed!
+//Car - Year, Make, Model Note: 3 event listeners
 
 //Reservation Date
 
