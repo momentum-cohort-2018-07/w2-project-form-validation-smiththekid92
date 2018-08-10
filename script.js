@@ -41,25 +41,27 @@ document.getElementById('submit-button').addEventListener('click', function(){
 
 //Car - Year, Make, Model Note: 3 event listeners
 
-//////Year
-var year = document.getElementById('car-year').value.trim()
+//////Year - currently runs else statement but not if statement
 
-if (year !== ""){
-    document.getElementById('car-year')
-    validYear() 
+var field = document.getElementById('car-field')
+
+if (field === ""){
+    document.getElementById('car-field')
+    validField() 
+    console.log('thanks')
 } else{
     emptyError1()
-    console.log('undefined car-year')
+    console.log('undefined car-field')
 }
     
 })
 
-function validYear(){
+function validField(){
 var validDiv = document.createElement('div')
 validDiv.classList.add('input-valid')
 
 
-var field = document.getElementById('car-year-field')
+var field = document.getElementById('car-field')
 field.appendChild(validDiv)
 field.classList.add('input-valid')
 }
@@ -69,7 +71,7 @@ var errorDiv = document.createElement('div')
 errorDiv.classList.add('error-message')
 errorDiv.innerText = 'This field is required'
 
-var field = document.getElementById('car-year-field')
+var field = document.getElementById('car-field')
 field.appendChild(errorDiv)
 field.classList.add('input-invalid')
 
@@ -211,7 +213,7 @@ field.classList.add('input-invalid')
 //     field.appendChild(errorDiv)
 //     field.classList.add('input-invalid')
 
-}
+// }
 
 ////////////////////////////Expiration
 
